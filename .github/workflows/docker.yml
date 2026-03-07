@@ -1,0 +1,21 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t jamesdillon/site .
+
+      - name: Push to GHCR
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+          docker tag jamesdillon/site ghcr.io/${{ github.repository }}/site:latest
+          docker push ghcr.io/${{ github.repository }}/site:latest
