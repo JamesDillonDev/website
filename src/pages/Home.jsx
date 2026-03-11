@@ -1,5 +1,15 @@
 import { Helmet } from 'react-helmet-async';
-import { FaHome } from 'react-icons/fa';
+import { FaHome, FaEnvelope } from 'react-icons/fa';
+          <button
+            onClick={() => window.open('https://mail.jamesdillon.uk/', '_blank')}
+            style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#3949ab', background: '#eaf0fa', border: 'none', fontWeight: 700, fontSize: 14, padding: '0.5rem 0.7rem', borderRadius: 7, cursor: 'pointer', boxShadow: '0 1px 4px rgba(0,0,0,0.07)', marginBottom: 6, transition: 'background 0.2s', width: '100%', minWidth: 80 }}
+            title="Mail"
+          >
+            <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 22, height: 22 }}>
+              <FaEnvelope size={18} color="#3949ab" />
+            </span>
+            <span style={{ fontSize: 13 }}>Mail</span>
+          </button>
 import { SiHomeassistant, SiJellyfin, SiWireguard } from 'react-icons/si';
 
 export default function Home() {
@@ -50,7 +60,7 @@ export default function Home() {
             <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 22, height: 22 }}>
               <SiWireguard size={18} color="#3949ab" />
             </span>
-            <span style={{ fontSize: 13 }}>WireGuard VPN</span>
+            <span style={{ fontSize: 13 }}>Wireguard VPN</span>
           </button>
           <button
             onClick={() => window.open('https://jellyfin.jamesdillon.uk', '_blank')}
@@ -62,6 +72,17 @@ export default function Home() {
             </span>
             <span style={{ fontSize: 13 }}>Jellyfin</span>
           </button>
+            <button
+              onClick={() => window.open('https://mail.jamesdillon.uk/', '_blank')}
+              style={{ display: 'flex', alignItems: 'center', gap: 8, color: '#3949ab', background: '#eaf0fa', border: 'none', fontWeight: 700, fontSize: 14, padding: '0.5rem 0.7rem', borderRadius: 7, cursor: 'pointer', boxShadow: '0 1px 4px rgba(0,0,0,0.07)', marginBottom: 6, transition: 'background 0.2s', width: '100%', minWidth: 80 }}
+              title="Mail"
+            >
+              <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 22, height: 22 }}>
+                <FaEnvelope size={18} color="#3949ab" />
+              </span>
+              <span style={{ fontSize: 13, textAlign: 'center' }}>Roundcube Mail</span>
+              <br></br>
+            </button>
         </div>
         {/* Main Content */}
         <div style={{ flex: 1, padding: '2rem 0', fontFamily: 'Roboto Mono, monospace', color: '#222', textAlign: 'left', marginLeft: 140 }}>
