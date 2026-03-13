@@ -15,9 +15,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 
-RUN sed -i 's|try_files $uri $uri/ =404;|try_files $uri /index.html;|g' /etc/nginx/conf.d/default.conf && \
-	sed -i '/server {/a \
-		location = /robots.txt {\n            add_header Content-Type text/plain;\n            return 200 "User-agent: *\\nAllow: /";\n        }\n' /etc/nginx/conf.d/default.conf
+RUN sed -i 's|try_files $uri $uri/ =404;|try_files $uri /index.html;|g' /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
