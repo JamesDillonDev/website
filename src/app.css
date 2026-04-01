@@ -1,0 +1,50 @@
+:root {
+	font-family: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+	color: #000000;
+	font-size: 18px;
+	line-height: 1.65;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+body {
+	background: #ffffff;
+	color: #000000;
+	font-family: inherit;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: inherit;
+}
+
+.page-copy {
+	padding: 2.75rem 1.75rem 3rem;
+	max-width: 52rem;
+}
+
+.page-copy h1,
+.page-copy h2,
+.page-copy p {
+	margin: 0;
+}
+
+.page-copy h1,
+.page-copy h2 {
+	font-size: clamp(2rem, 3.5vw, 2.8rem);
+	line-height: 1.15;
+}
+
+.page-copy p {
+	margin-top: 1rem;
+	font-size: 1.08rem;
+	line-height: 1.8;
+	letter-spacing: 0.01em;
+}

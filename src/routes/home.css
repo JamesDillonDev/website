@@ -1,0 +1,44 @@
+.hero-banner {
+	position: relative;
+	min-height: clamp(22rem, 70vh, 42rem);
+	overflow: hidden;
+}
+
+.hero-image {
+	display: block;
+	width: 100%;
+	height: clamp(22rem, 70vh, 42rem);
+	object-fit: cover;
+}
+
+.hero-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: clamp(1.5rem, 4vw, 3rem);
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.18) 45%, rgba(0, 0, 0, 0));
+	color: #ffffff;
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+	margin: 0;
+}
+
+.hero-overlay h1 {
+	font-size: clamp(2.25rem, 6vw, 5rem);
+	font-weight: 800;
+}
+
+.hero-overlay p {
+	margin-top: 0.6rem;
+	font-size: clamp(1rem, 2vw, 1.35rem);
+}
+
+.page-copy {
+	width: 100%;
+	max-width: none;
+	box-sizing: border-box;
+}
