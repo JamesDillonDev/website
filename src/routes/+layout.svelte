@@ -8,6 +8,8 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<meta name="geo.region" content="GB-HRT" />
+  	<meta name="geo.placename" content="Hertfordshire" />
 </svelte:head>
 
 <Header />

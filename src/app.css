@@ -48,3 +48,184 @@ a {
 	line-height: 1.8;
 	letter-spacing: 0.01em;
 }
+
+.quick-links-section {
+	padding-top: 0;
+}
+
+.quick-links-list {
+	margin: 1.5rem 0 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.85rem;
+}
+
+.quick-links-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1rem 1.1rem;
+	border: 1px solid #d9d9d9;
+	border-radius: 0.9rem;
+	background: #f8f8f8;
+}
+
+.quick-links-label {
+	display: flex;
+	align-items: center;
+	gap: 0.85rem;
+	min-width: 0;
+}
+
+.quick-links-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 0.75rem;
+	background: #ffffff;
+	border: 1px solid #dfdfdf;
+	color: #111111;
+}
+
+.quick-links-icon svg {
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.quick-links-item span {
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+.quick-links-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.55rem 1rem;
+	border-radius: 999px;
+	background: #111111;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.95rem;
+	font-weight: 600;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.quick-links-button:hover,
+.quick-links-button:focus-visible {
+	background: #2b2b2b;
+	transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+	.quick-links-item {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.about-page {
+	width: 100%;
+	max-width: 68rem;
+	box-sizing: border-box;
+}
+
+.about-card {
+	margin-top: 1.75rem;
+	padding: 1.5rem;
+	border: 1px solid #d9d9d9;
+	border-radius: 1.2rem;
+	background: linear-gradient(180deg, #fcfcfc 0%, #f4f4f4 100%);
+}
+
+.about-card-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.school-logo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 1.25rem;
+	background: #111111;
+	color: #ffffff;
+	font-size: 1.2rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	flex: 0 0 auto;
+}
+
+.about-school-copy {
+	min-width: 0;
+	flex: 1 1 auto;
+}
+
+.about-school-copy h2,
+.about-school-copy p,
+.about-intro,
+.about-results-intro {
+	margin: 0;
+}
+
+.about-school-copy h2 {
+	font-size: clamp(1.5rem, 2.4vw, 2rem);
+	line-height: 1.2;
+}
+
+.about-school-copy p {
+	margin-top: 0.35rem;
+	color: #4a4a4a;
+	font-size: 1rem;
+}
+
+.about-intro,
+.about-results-intro {
+	margin-top: 1.35rem;
+}
+
+.results-table-wrap {
+	margin-top: 1rem;
+	overflow-x: auto;
+	border-radius: 1rem;
+	border: 1px solid #dddddd;
+	background: #ffffff;
+}
+
+.results-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 34rem;
+}
+
+.results-table th,
+.results-table td {
+	padding: 0.9rem 1rem;
+	text-align: left;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.results-table th {
+	background: #f5f5f5;
+	font-size: 0.95rem;
+	font-weight: 700;
+}
+
+.results-table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+@media (max-width: 720px) {
+	.about-card-header {
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+}
