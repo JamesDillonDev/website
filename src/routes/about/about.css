@@ -1,11 +1,14 @@
 .about-page {
+    width: min(100%, 56rem);
+    margin: 0 auto;
     padding: 5rem 2rem 2rem;
     color: #222;
+    box-sizing: border-box;
 }
 
 .about-shell {
-    max-width: 75rem;
-    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -101,12 +104,11 @@ p {
 }
 
 .section-copy {
-    max-width: 60rem;
     margin-bottom: 1.125rem;
 }
 
 .results-table-wrap {
-    max-width: 43.75rem;
+    width: 100%;
     overflow-x: auto;
 }
 

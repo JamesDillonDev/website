@@ -28,6 +28,8 @@ a {
 .page-copy {
 	padding: 2.75rem 1.75rem 3rem;
 	max-width: 52rem;
+	margin: 0 auto;
+	box-sizing: border-box;
 }
 
 .page-copy h1,
