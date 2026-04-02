@@ -39,4 +39,27 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Docker deploy for Raspberry Pi
+
+This project is set up to use SvelteKit's official Node adapter so it can run as a containerized Node server.
+
+Install dependencies locally after pulling the latest changes:
+
+```sh
+npm install
+```
+
+Build and push a Raspberry Pi compatible image with Docker Buildx:
+
+```sh
+docker buildx build --platform linux/arm64 -t your-registry/website:latest --push .
+```
+
+On the Pi, pull and run it:
+
+```sh
+docker pull your-registry/website:latest
+docker run -d --name website -p 3000:3000 your-registry/website:latest
+```
+
+If you are serving the site behind Nginx, Caddy, or another reverse proxy, point it at port `3000` in the container.
