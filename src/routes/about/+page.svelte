@@ -1,5 +1,9 @@
 <script>
 	import './about.css';
+	import dofeLogo from '$lib/assets/dofe.png';
+	import knightsLogo from '$lib/assets/knights.png';
+	import rafacLogo from '$lib/assets/rafac.png';
+	import scoutsLogo from '$lib/assets/scouts.png';
 
 	let showCadets = $state(true);
 	let showScouts = $state(true);
@@ -33,7 +37,7 @@
 
 		<section class="education-card">
 			<div class="education-header">
-				<img src="/src/lib/assets/knights.png" alt="Knights Templar School logo" style="width: 3.375rem; height: 3.375rem; object-fit: contain; border-radius: 0.5rem;" />
+				<img src={knightsLogo} alt="Knights Templar School logo" style="width: 3.375rem; height: 3.375rem; object-fit: contain; border-radius: 0.5rem;" />
 				<div class="education-copy">
 					<h2>Knights Templar School</h2>
 					<p class="education-meta">Sixth Form Student | 2020-present</p>
@@ -86,7 +90,7 @@
 					<p class="period">(2022 to present)</p>
 					<div class="feature-row">
 						<div class="feature-badge raf-badge" aria-hidden="true">
-							<img src="/src/lib/assets/rafac.png" alt="Royal Air Force Air Cadets logo" style="width: 12.5rem; height: 7.5rem; object-fit: contain; border-radius: 0.5rem;" />
+							<img src={rafacLogo} alt="Royal Air Force Air Cadets logo" style="width: 12.5rem; height: 7.5rem; object-fit: contain; border-radius: 0.5rem;" />
 						</div>
 						<div class="feature-copy">
 							<p>
@@ -126,7 +130,7 @@
 					<p class="period">(2014 to present)</p>
 					<div class="feature-row reverse">
 						<div class="feature-badge scouts-badge" aria-hidden="true">
-							<img src="/src/lib/assets/scouts.png" alt="Scouts logo" style="width: 7.5rem; height: 7.5rem; object-fit: contain; border-radius: 0.5rem;" />
+							<img src={scoutsLogo} alt="Scouts logo" style="width: 7.5rem; height: 7.5rem; object-fit: contain; border-radius: 0.5rem;" />
 						</div>
 						<div class="feature-copy">
 							<p>
@@ -155,7 +159,7 @@
 				<div class="accordion-body">
 					<div class="feature-row">
 						   <div class="feature-badge dofe-badge" aria-hidden="true">
-							   <img src="/src/lib/assets/dofe.png" alt="Duke of Edinburgh's Award logo" style="width: 7.5rem; height: 7.5rem; object-fit: contain; border-radius: 0.5rem;" />
+							   <img src={dofeLogo} alt="Duke of Edinburgh's Award logo" style="width: 7.5rem; height: 7.5rem; object-fit: contain; border-radius: 0.5rem;" />
 						   </div>
 						<div class="feature-copy">
 							<p>
