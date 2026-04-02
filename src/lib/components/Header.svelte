@@ -6,8 +6,9 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
 		{ href: '/work', label: 'Work' },
-		{ href: '/projects', label: 'Projects' },
-		{ href: '/contact', label: 'Contact' }
+		{ href: '/software', label: 'Software' },
+		{ href: '/contact', label: 'Contact' },
+		{ href: 'https://blog.jamesdillon.uk', label: 'Blog', external: true }
 	];
 
 	/** @param {string} href */
@@ -45,3 +46,4 @@
 		</div>
 	</div>
 </header>
+
