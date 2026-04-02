@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>James Dillon</title>
+	<title>James Dillon | Home</title>
 	<meta
 		name="description"
 		content="Welcome to James Dillon's personal website. Explore his projects, work experience, and contact information."
