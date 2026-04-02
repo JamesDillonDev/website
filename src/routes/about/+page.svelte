@@ -29,7 +29,7 @@
 
 <section class="about-page">
 	<div class="about-shell">
-		<h1>About</h1>
+		<h1>About Me</h1>
 
 		<section class="education-card">
 			<div class="education-header">
