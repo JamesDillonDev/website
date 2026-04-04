@@ -6,7 +6,7 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
 		{ href: '/work', label: 'Work' },
-		{ href: '/software', label: 'Software' },
+		{ href: '/selfhosted', label: 'Self Hosted' },
 		{ href: '/contact', label: 'Contact' },
 		{ href: 'https://blog.jamesdillon.uk', label: 'Blog', external: true }
 	];
