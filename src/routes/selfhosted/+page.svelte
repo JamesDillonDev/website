@@ -6,7 +6,7 @@
 
 	import jellyfinLogo from '$lib/assets/jellyfinLogo.png';
 	import jellyfinMedia from '$lib/assets/jellyfinMovies.png';
-	import jellyfinDashboard from '$lib/assets/jellyfinDashboard.png';
+	import jellyfinDashboard from '$lib/assets/jellyfindashboard.png';
 	
 	import './software.css';
 </script>
@@ -107,8 +107,14 @@
 			<div class="software-card-body">
 				<div class="software-copy">
 					<p>
-						I also run Jellyfin as part of my home lab, providing a fully self-hosted way to organise and stream our media from a system I control. It includes CDs my family owns that I’ve ripped and stored on the server, creating a single, centralised library for our music collection.
-						Like the rest of my setup, the focus is on reliability and ease of use, so it feels like a practical family media service rather than another project that requires constant maintenance.
+						I also run Jellyfin as part of my home lab, providing a fully self-hosted way to
+						organise and stream our media from a system I control.
+					</p>
+					<p>
+						It includes CDs my family owns that I have ripped and stored on the server, creating
+						a single central library for our music collection. Like the rest of my setup, the
+						focus is on reliability and ease of use, so it feels like a practical family media
+						service rather than another project that needs constant maintenance.
 					</p>
 				</div>
 
