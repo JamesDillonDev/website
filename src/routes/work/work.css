@@ -43,15 +43,32 @@
 .project-image {
 	border-radius: 0.5rem;
 	box-shadow: 0 2px 12px rgb(0 0 0 / 7%);
-	object-fit: contain;
+	object-fit: cover;
 	background: #fff;
 	flex-shrink: 0;
 }
 
 .company-logo {
-	width: 3.375rem;
-	height: 3.375rem;
-	box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
+	width: auto;
+	height: 2.25rem;
+	max-width: 8.5rem;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+	background: transparent;
+	object-fit: contain;
+}
+
+.company-copy {
+	padding-left: 0.95rem;
+	border-left: 1px solid #c5c9da;
+}
+
+.company-header-break {
+	flex-basis: 100%;
+	height: 0;
+	margin: 0;
+	border: 0;
 }
 
 .company-copy h2 {
@@ -125,12 +142,106 @@
 	text-decoration: underline;
 }
 
+.work-copy .repo-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.5rem 0.85rem;
+	border-radius: 0.45rem;
+	background: #111;
+	color: #fff;
+	font-size: 0.9rem;
+	font-weight: 700;
+	text-decoration: none;
+	line-height: 1;
+	transition: background-color 0.2s ease;
+}
+
+.work-copy .repo-link:hover,
+.work-copy .repo-link:focus-visible {
+	background: #2d2d2d;
+}
+
+.repo-link-icon {
+	width: 1rem;
+	height: 1rem;
+	fill: currentColor;
+	flex-shrink: 0;
+}
+
 .project-image.small {
 	width: min(100%, 13.75rem);
 }
 
 .project-image.large {
 	width: min(100%, 20rem);
+}
+
+.project-carousel {
+	flex: 0 1 20rem;
+	width: 100%;
+	max-width: 20rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.project-carousel-frame {
+	overflow: hidden;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 12px rgb(0 0 0 / 7%);
+	background: #fff;
+}
+
+.project-image.carousel-image {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	display: block;
+}
+
+.project-carousel-controls {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.6rem;
+}
+
+.carousel-btn {
+	flex: 1;
+	padding: 0.45rem 0.65rem;
+	border: 1px solid #d2d7eb;
+	border-radius: 0.375rem;
+	background: #fff;
+	color: #1a237e;
+	font-size: 0.875rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+	background: #1a237e;
+	color: #fff;
+}
+
+.project-carousel-dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.45rem;
+}
+
+.carousel-dot {
+	width: 0.55rem;
+	height: 0.55rem;
+	border: 0;
+	border-radius: 999px;
+	background: #c6ccde;
+	cursor: pointer;
+	padding: 0;
+}
+
+.carousel-dot.active-dot {
+	background: #1a237e;
 }
 
 @media (max-width: 700px) {
@@ -149,5 +260,9 @@
 	.reverse-mobile {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	.project-carousel {
+		max-width: 100%;
 	}
 }
