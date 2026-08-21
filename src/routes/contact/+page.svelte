@@ -86,57 +86,66 @@
 	<meta name="description" content="Contact James Dillon directly via email form." />
 </svelte:head>
 
-<section class="contact-page">
-	<div class="contact-shell">
-		<h1>Contact</h1>
-		<p class="intro-copy">Get in touch directly using the form below.</p>
+<section class="page contact-page">
+	<div class="shell">
+		<header>
+			<h1 class="page-title">Contact</h1>
+			<p class="page-lede">Get in touch directly using the form below.</p>
+		</header>
 
-		{#if alert.show}
-			<div class={`alert alert-${alert.type}`} role="alert">
-				{alert.message}
-			</div>
-		{/if}
+		<div class="contact-card">
+			{#if alert.show}
+				<div class={`alert alert-${alert.type}`} role="alert">
+					{alert.message}
+				</div>
+			{/if}
 
-		<form class="contact-form" onsubmit={handleSubmit}>
-			<div class="field-row">
-				<label for="name">Name</label>
-				<input
-					id="name"
-					name="name"
-					type="text"
-					value={form.name}
-					oninput={handleChange}
-					required
-					placeholder="John Smith"
-				/>
-			</div>
+			<form class="contact-form" onsubmit={handleSubmit}>
+				<div class="field-grid">
+					<div class="field">
+						<label for="name">Name</label>
+						<input
+							id="name"
+							name="name"
+							type="text"
+							value={form.name}
+							oninput={handleChange}
+							required
+							placeholder="John Smith"
+						/>
+					</div>
 
-			<div class="field-row">
-				<label for="email">Email</label>
-				<input
-					id="email"
-					name="email"
-					type="email"
-					value={form.email}
-					oninput={handleChange}
-					required
-					placeholder="example@outlook.com"
-				/>
-			</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input
+							id="email"
+							name="email"
+							type="email"
+							value={form.email}
+							oninput={handleChange}
+							required
+							placeholder="example@outlook.com"
+						/>
+					</div>
+				</div>
 
-			<div class="field-row message-row">
-				<label for="message">Message</label>
-				<textarea
-					id="message"
-					name="message"
-					rows="4"
-					value={form.message}
-					oninput={handleChange}
-					required
-				></textarea>
-			</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea
+						id="message"
+						name="message"
+						rows="5"
+						value={form.message}
+						oninput={handleChange}
+						required
+						placeholder="How can I help?"
+					></textarea>
+				</div>
 
-			<button type="submit">Contact</button>
-		</form>
+				<div class="form-actions">
+					<button class="btn" type="submit">Send message</button>
+				</div>
+			</form>
+		</div>
 	</div>
 </section>

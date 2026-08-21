@@ -1,13 +1,13 @@
-.hero-banner {
+.hero {
 	position: relative;
-	min-height: clamp(22rem, 70vh, 42rem);
 	overflow: hidden;
+	background: var(--surface-sunken);
 }
 
 .hero-image {
 	display: block;
 	width: 100%;
-	height: clamp(22rem, 70vh, 42rem);
+	height: clamp(20rem, 62vh, 36rem);
 	object-fit: cover;
 }
 
@@ -15,29 +15,42 @@
 	position: absolute;
 	inset: 0;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding: clamp(1.75rem, 4vw, 3rem);
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.18) 45%, rgba(0, 0, 0, 0));
+	align-items: flex-end;
+	padding: clamp(1.5rem, 4vw, 3rem) var(--gutter);
+	background: linear-gradient(
+		to top,
+		rgb(6 9 15 / 78%),
+		rgb(6 9 15 / 30%) 45%,
+		rgb(6 9 15 / 0%) 78%
+	);
 	color: #ffffff;
 }
 
-.hero-overlay h1,
-.hero-overlay p {
-	margin: 0;
+.hero-inner {
+	width: min(100%, 72rem);
+	margin-inline: auto;
 }
 
-.hero-overlay h1 {
-	font-size: clamp(2.25rem, 6vw, 5rem);
-	font-weight: 800;
+.hero-inner h1 {
+	font-size: clamp(2.5rem, 7vw, 4.75rem);
+	font-weight: 700;
+	letter-spacing: -0.035em;
+	line-height: 1.02;
 }
 
-.hero-overlay p {
-	margin-top: 0.6rem;
-	font-size: clamp(1rem, 2vw, 1.35rem);
+.hero-inner p {
+	margin-top: 0.65rem;
+	max-width: 32rem;
+	color: rgb(255 255 255 / 88%);
+	font-size: clamp(1rem, 1.8vw, 1.25rem);
+	line-height: 1.6;
 }
 
-.page-copy {
-	width: 100%;
-	box-sizing: border-box;
+.statement {
+	margin-top: 1.25rem;
+	max-width: 46rem;
+}
+
+.statement p {
+	font-size: 1.05rem;
 }

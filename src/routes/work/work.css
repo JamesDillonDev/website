@@ -1,268 +1,172 @@
-.work-page {
-	padding: 5rem 2rem 2rem;
-	color: #222;
-	box-sizing: border-box;
+/* Work page — scoped to .work-page */
+
+/* Roles are separated by generous whitespace rather than boxes */
+.work-page .role + .role {
+	margin-top: clamp(1rem, 2vw, 1.75rem);
 }
 
-.work-shell {
-	width: min(100%, 56rem);
-	margin: 0 auto;
-	box-sizing: border-box;
+.work-page .role-head {
+	padding-bottom: 0.25rem;
 }
 
-.work-shell h1,
-.work-shell h2,
-.work-shell h3,
-.work-shell p {
-	margin: 0;
+.work-page .role-intro {
+	margin-top: 1rem;
 }
 
-.work-shell h1 {
-	margin-bottom: 1.2rem;
-	font-size: 2.1rem;
-	font-weight: 700;
-	letter-spacing: -0.02em;
+.work-page .project {
+	margin-top: 1.85rem;
 }
 
-.company-intro,
-.work-card {
-	margin-bottom: 2.2rem;
-}
-
-.company-header {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 1.125rem;
-	margin-bottom: 0.5rem;
-	padding-right: 8rem;
-}
-
-.company-logo,
-.project-image {
-	border-radius: 0.5rem;
-	box-shadow: 0 2px 12px rgb(0 0 0 / 7%);
-	object-fit: cover;
-	background: #fff;
-	flex-shrink: 0;
-}
-
-.company-logo {
-	width: auto;
-	height: 2.25rem;
-	max-width: 8.5rem;
-	padding: 0;
-	border-radius: 0;
-	box-shadow: none;
-	background: transparent;
-	object-fit: contain;
-}
-
-.company-copy {
-	padding-left: 0.95rem;
-	border-left: 1px solid #c5c9da;
-}
-
-.company-header-break {
-	flex-basis: 100%;
-	height: 0;
-	margin: 0;
-	border: 0;
-}
-
-.company-copy h2 {
-	color: #1a237e;
-	font-size: 1.7rem;
-	font-weight: 800;
-}
-
-.company-meta {
-	margin-top: 0.35rem;
-	color: #333;
-	font-size: 1.1rem;
+.work-page .project-title {
+	font-size: 1.15rem;
 	font-weight: 600;
-	line-height: 1.5;
+	letter-spacing: -0.015em;
+	line-height: 1.35;
 }
 
-.visit-link {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0.45rem 1.1rem;
-	border-radius: 0.375rem;
-	background: #1a237e;
-	box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
-	color: #fff;
-	font-size: 0.9375rem;
-	font-weight: 700;
-	text-decoration: none;
-	transition: background-color 0.2s ease;
-}
-
-.visit-link:hover,
-.visit-link:focus-visible {
-	background: #3949ab;
-}
-
-.intro-copy,
-.work-copy p {
-	font-size: 0.9375rem;
-	color: #444;
-	line-height: 1.75;
-}
-
-.work-copy p + p {
-	margin-top: 0.75rem;
-}
-
-.work-card h3 {
-	margin-bottom: 0.5rem;
-	font-size: 1.3rem;
-	font-weight: 700;
-}
-
-.work-card-body {
+.work-page .project-body {
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
-	gap: 1.5rem;
+	gap: clamp(1.25rem, 3vw, 2rem);
+	flex-wrap: wrap;
+	margin-top: 1rem;
 }
 
-.work-copy {
+.work-page .project-body.reverse {
+	flex-direction: row-reverse;
+}
+
+.work-page .project-copy {
 	flex: 1 1 20rem;
 	min-width: 0;
 }
 
-.work-copy a {
-	color: #1a237e;
-	text-decoration: underline;
+.work-page .project-actions {
+	display: flex;
+	margin-top: 1.15rem;
 }
 
-.work-copy .repo-link {
-	display: inline-flex;
+.work-page .project-media {
+	flex: 0 1 18rem;
+	max-width: 18rem;
+}
+
+.work-page .project-media.narrow {
+	flex-basis: 12rem;
+	max-width: 12rem;
+}
+
+.work-page .project-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius);
+	object-fit: contain;
+}
+
+/* ── Carousel ───────────────────────────────────────────────── */
+
+.work-page .carousel {
+	flex: 0 1 17rem;
+	max-width: 17rem;
+	width: 100%;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.work-page .carousel-frame {
+	overflow: hidden;
+	border-radius: var(--radius);
+	background: var(--surface-alt);
+}
+
+.work-page .carousel-image {
+	display: block;
+	width: 100%;
+	/* Matches the source photos (3:4 portrait) so nothing is stretched or cropped */
+	aspect-ratio: 3 / 4;
+	object-fit: contain;
+}
+
+.work-page .carousel-controls {
+	display: flex;
 	align-items: center;
-	gap: 0.45rem;
-	padding: 0.5rem 0.85rem;
-	border-radius: 0.45rem;
-	background: #111;
-	color: #fff;
-	font-size: 0.9rem;
-	font-weight: 700;
-	text-decoration: none;
-	line-height: 1;
-	transition: background-color 0.2s ease;
+	justify-content: space-between;
+	gap: 0.75rem;
 }
 
-.work-copy .repo-link:hover,
-.work-copy .repo-link:focus-visible {
-	background: #2d2d2d;
+.work-page .carousel-arrow {
+	display: grid;
+	place-items: center;
+	width: 2.1rem;
+	height: 2.1rem;
+	padding: 0;
+	border: 1px solid var(--line-strong);
+	border-radius: 999px;
+	background: var(--surface);
+	color: var(--ink-soft);
+	cursor: pointer;
+	transition:
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease;
 }
 
-.repo-link-icon {
+.work-page .carousel-arrow svg {
 	width: 1rem;
 	height: 1rem;
-	fill: currentColor;
-	flex-shrink: 0;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 
-.project-image.small {
-	width: min(100%, 13.75rem);
+.work-page .carousel-arrow:hover,
+.work-page .carousel-arrow:focus-visible {
+	background: var(--control-tint);
+	border-color: var(--ink-muted);
+	color: var(--ink);
 }
 
-.project-image.large {
-	width: min(100%, 20rem);
-}
-
-.project-carousel {
-	flex: 0 1 20rem;
-	width: 100%;
-	max-width: 20rem;
+.work-page .carousel-dots {
 	display: flex;
-	flex-direction: column;
-	gap: 0.6rem;
+	align-items: center;
+	gap: 0.4rem;
 }
 
-.project-carousel-frame {
-	overflow: hidden;
-	border-radius: 0.5rem;
-	box-shadow: 0 2px 12px rgb(0 0 0 / 7%);
-	background: #fff;
-}
-
-.project-image.carousel-image {
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	display: block;
-}
-
-.project-carousel-controls {
-	display: flex;
-	justify-content: space-between;
-	gap: 0.6rem;
-}
-
-.carousel-btn {
-	flex: 1;
-	padding: 0.45rem 0.65rem;
-	border: 1px solid #d2d7eb;
-	border-radius: 0.375rem;
-	background: #fff;
-	color: #1a237e;
-	font-size: 0.875rem;
-	font-weight: 600;
-	cursor: pointer;
-	transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.carousel-btn:hover,
-.carousel-btn:focus-visible {
-	background: #1a237e;
-	color: #fff;
-}
-
-.project-carousel-dots {
-	display: flex;
-	justify-content: center;
-	gap: 0.45rem;
-}
-
-.carousel-dot {
-	width: 0.55rem;
-	height: 0.55rem;
+.work-page .carousel-dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	padding: 0;
 	border: 0;
 	border-radius: 999px;
-	background: #c6ccde;
+	background: var(--line-strong);
 	cursor: pointer;
-	padding: 0;
+	transition:
+		background-color 0.2s ease,
+		width 0.2s ease;
 }
 
-.carousel-dot.active-dot {
-	background: #1a237e;
+.work-page .carousel-dot:hover {
+	background: var(--ink-muted);
+}
+
+.work-page .carousel-dot.active-dot {
+	width: 1.35rem;
+	background: var(--ink);
 }
 
 @media (max-width: 700px) {
-	.work-page {
-		padding: 4.5rem 1rem 2rem;
-	}
-
-	.company-header {
-		padding-right: 0;
-	}
-
-	.visit-link {
-		position: static;
-	}
-
-	.reverse-mobile {
+	.work-page .project-body,
+	.work-page .project-body.reverse {
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: stretch;
 	}
 
-	.project-carousel {
+	.work-page .carousel,
+	.work-page .project-media,
+	.work-page .project-media.narrow {
 		max-width: 100%;
 	}
 }
