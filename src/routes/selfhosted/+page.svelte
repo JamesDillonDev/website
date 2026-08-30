@@ -1,8 +1,8 @@
 <script>
-	import homeAssistantDashboard from '$lib/assets/dashboard.png';
+	import homeAssistantDashboard from '$lib/assets/ha/dashboard.png';
 	import homeAssistantLogo from '$lib/assets/homelogo.png';
-	import homeAssistantMedia from '$lib/assets/media.png';
-	import homeAssistantFloor from '$lib/assets/floor.png';
+	import homeAssistantOverview from '$lib/assets/ha/overview.png';
+	import homeAssistantTravel from '$lib/assets/ha/travel.png';
 
 	import jellyfinLogo from '$lib/assets/jellyfinLogo.png';
 	import jellyfinMedia from '$lib/assets/jellyfinMovies.png';
@@ -73,14 +73,12 @@
 						<figcaption>Main dashboard view for my Home Assistant server.</figcaption>
 					</figure>
 					<figure class="gallery-panel">
-						<img src={homeAssistantMedia} alt="Home Assistant media control view" />
-						<figcaption>Media control view showing Sonos speakers and TV controls.</figcaption>
+						<img src={homeAssistantOverview} alt="Home Assistant overview view" />
+						<figcaption>Overview view showing household status at a glance.</figcaption>
 					</figure>
 					<figure class="gallery-panel">
-						<img src={homeAssistantFloor} alt="Home Assistant floor plan view" />
-						<figcaption>
-							Floor plan view showing the layout of my home and device locations.
-						</figcaption>
+						<img src={homeAssistantTravel} alt="Home Assistant travel view" />
+						<figcaption>Travel view showing commute times to nearby destinations.</figcaption>
 					</figure>
 				</div>
 			</div>

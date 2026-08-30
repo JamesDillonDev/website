@@ -18,6 +18,8 @@
 	/** @type {any} */
 	let pdfDoc;
 	/** @type {any} */
+	let loadingTask;
+	/** @type {any} */
 	let renderTask;
 
 	onMount(() => {
@@ -29,7 +31,8 @@
 				const workerUrl = (await import('pdfjs-dist/build/pdf.worker.mjs?url')).default;
 				pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl;
 
-				const doc = await pdfjsLib.getDocument({ url: src }).promise;
+				loadingTask = pdfjsLib.getDocument({ url: src });
+				const doc = await loadingTask.promise;
 				if (cancelled) return;
 
 				pdfDoc = doc;
@@ -51,7 +54,7 @@
 			document.removeEventListener('fullscreenchange', handleFullscreenChange);
 			window.removeEventListener('resize', handleResize);
 			renderTask?.cancel();
-			pdfDoc?.destroy();
+			loadingTask?.destroy();
 		};
 	});
 
