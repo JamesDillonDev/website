@@ -1,0 +1,19 @@
+/* Coursework page — scoped to .coursework-page */
+
+.coursework-page .coursework-item + .coursework-item {
+	margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.coursework-page .coursework-head {
+	padding-bottom: 0.25rem;
+}
+
+.coursework-page .pdf-frame {
+	margin-top: 1.1rem;
+}
+
+@media (max-width: 640px) {
+	.coursework-page .pdf-frame {
+		margin-top: 0.9rem;
+	}
+}

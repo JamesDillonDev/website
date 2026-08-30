@@ -4,7 +4,8 @@
 	"version": "0.0.1",
 	"type": "module",
 	"dependencies": {
-		"@emailjs/browser": "^4.4.1"
+		"@emailjs/browser": "^4.4.1",
+		"pdfjs-dist": "^6.3.289"
 	},
 	"scripts": {
 		"dev": "vite dev",
@@ -25,4 +26,3 @@
 		"vite": "^7.3.1"
 	}
 }
-

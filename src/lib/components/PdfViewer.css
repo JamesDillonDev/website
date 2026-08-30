@@ -1,0 +1,120 @@
+.pdf-viewer {
+	display: grid;
+	gap: 0.75rem;
+	outline: none;
+}
+
+.pdf-viewer-stage {
+	position: relative;
+	display: grid;
+	place-items: center;
+	height: 80vh;
+	overflow: hidden;
+}
+
+.pdf-viewer-canvas {
+	max-width: 100%;
+	max-height: 100%;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--surface-alt);
+}
+
+.pdf-viewer-canvas.is-hidden {
+	display: none;
+}
+
+.pdf-viewer-status {
+	color: var(--ink-soft);
+	font-size: 0.95rem;
+}
+
+.pdf-viewer-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.9rem;
+}
+
+.pdf-viewer-page {
+	min-width: 7rem;
+	color: var(--ink-soft);
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.pdf-viewer-arrow,
+.pdf-viewer-fullscreen-toggle {
+	display: grid;
+	place-items: center;
+	width: 2.1rem;
+	height: 2.1rem;
+	padding: 0;
+	border: 1px solid var(--line-strong);
+	border-radius: 999px;
+	background: var(--surface);
+	color: var(--ink-soft);
+	cursor: pointer;
+	transition:
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.pdf-viewer-arrow svg,
+.pdf-viewer-fullscreen-toggle svg {
+	width: 1rem;
+	height: 1rem;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.pdf-viewer-arrow:hover,
+.pdf-viewer-arrow:focus-visible,
+.pdf-viewer-fullscreen-toggle:hover,
+.pdf-viewer-fullscreen-toggle:focus-visible {
+	background: var(--control-tint);
+	border-color: var(--ink-muted);
+	color: var(--ink);
+}
+
+.pdf-viewer-arrow:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.pdf-viewer-fullscreen-toggle {
+	margin-left: 0.4rem;
+}
+
+/* Fullscreen mode fills the browser window like a presentation */
+.pdf-viewer-fullscreen {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background: var(--surface-alt);
+}
+
+.pdf-viewer-fullscreen .pdf-viewer-stage {
+	flex: 1;
+	height: auto;
+}
+
+.pdf-viewer-fullscreen .pdf-viewer-canvas {
+	border: 0;
+	border-radius: 0;
+}
+
+.pdf-viewer-fullscreen .pdf-viewer-controls {
+	padding: 0.75rem 0;
+	border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+	.pdf-viewer-stage {
+		height: 60vh;
+	}
+}

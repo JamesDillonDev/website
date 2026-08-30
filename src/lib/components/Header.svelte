@@ -6,6 +6,7 @@
 		{ href: '/', label: 'Home' },
 		{ href: '/about', label: 'About' },
 		{ href: '/work', label: 'Work' },
+		{ href: '/coursework', label: 'Coursework' },
 		{ href: '/selfhosted', label: 'Self Hosted' },
 		{ href: '/contact', label: 'Contact' }
 	];
