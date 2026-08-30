@@ -2,6 +2,7 @@
 	import './coursework.css';
 	import PdfViewer from '$lib/components/PdfViewer.svelte';
 	import dtCoursework from '$lib/assets/coursework/GCSE_DT_Coursework.pdf';
+	import epqCoursework from '$lib/assets/coursework/17401_3044_DILLON_ Essay.pdf';
 
 	const courseworkItems = [
 		{
@@ -10,6 +11,13 @@
 			grade: '9',
 			file: dtCoursework,
 			fileName: 'GCSE_DT_Coursework.pdf'
+		},
+		{
+			title: 'EPQ: Creating an Automatic Pet Feeder',
+			subject: 'Extended Project Qualification',
+			grade: 'A* (50/52)',
+			file: epqCoursework,
+			fileName: 'EPQ_Automatic_Pet_Feeder.pdf'
 		}
 	];
 </script>

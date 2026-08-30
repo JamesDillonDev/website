@@ -46,7 +46,7 @@
 			</a>
 			<a
 				class="social-link"
-				href="https://www.linkedin.com/in/james-dillon-6b3121368/"
+				href="https://www.linkedin.com/in/jamesdillondev/"
 				target="_blank"
 				rel="noopener"
 				aria-label="LinkedIn"
