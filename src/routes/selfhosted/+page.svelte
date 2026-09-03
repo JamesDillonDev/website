@@ -1,4 +1,6 @@
 <script>
+	import websiteFavicon from '$lib/assets/favicon.ico';
+
 	import homeAssistantDashboard from '$lib/assets/ha/dashboard.png';
 	import homeAssistantLogo from '$lib/assets/homelogo.png';
 	import homeAssistantOverview from '$lib/assets/ha/overview.png';
@@ -27,6 +29,29 @@
 				The services I run at home, from smart home automation to a family media library.
 			</p>
 		</header>
+
+		<article class="service">
+			<div class="entity-head service-head">
+				<span class="entity-mark">
+					<img src={websiteFavicon} alt="Website favicon" />
+				</span>
+				<div class="entity-copy">
+					<h2>jamesdillon.uk (this site)</h2>
+					<p class="entity-meta">Personal Portfolio Website</p>
+				</div>
+			</div>
+
+			<div class="service-body">
+				<div class="prose service-copy">
+					<p>
+						This site itself is self-hosted, built with SvelteKit and served from a custom Docker
+						image. Pushing changes to the Git repository triggers a build of a new image, which my
+						server then automatically pulls and updates to, so deployments need no manual steps
+						beyond a <code>git push</code>.
+					</p>
+				</div>
+			</div>
+		</article>
 
 		<article class="service">
 			<div class="entity-head service-head">
