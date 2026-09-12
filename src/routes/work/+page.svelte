@@ -3,6 +3,7 @@
 	import missile1 from '$lib/assets/missile1.jpg';
 	import missile2 from '$lib/assets/missile2.jpg';
 	import missile3 from '$lib/assets/missile3.jpg';
+	import obsidianJanus from '$lib/assets/obsidian-janus.png';
 
 	const missilePhotos = [
 		{ src: missile1, alt: 'Mini guided missile project photo 1' },
@@ -70,7 +71,7 @@
 
 			<section class="project">
 				<h3 class="project-title">Miniature Guided Missile &mdash; Raspberry Pi Project</h3>
-				<div class="project-body">
+				<div class="project-body align-top">
 					<div class="project-copy">
 						<div class="prose">
 							<p>
@@ -155,7 +156,7 @@
 					alt="Janus Technology logo"
 				/>
 				<div class="entity-copy">
-					<p class="entity-meta">Junior Software Engineer &middot; July 2025 &ndash; Aug 2025</p>
+					<p class="entity-meta">Junior Software Engineer (Part-time) &middot; July 2025 &ndash; Present</p>
 				</div>
 				<a
 					class="btn btn-outline btn-sm"
@@ -224,6 +225,40 @@
 						<img
 							src="https://cdn.shopify.com/s/files/1/0712/9409/1574/files/Phone_with_Tablet_-_Landscape_Home_-_2x2_fb41be4b-2670-48a2-8fed-b6e4f70d0848.png?v=1741752714"
 							alt="Stile App on iPad controlling AVPro Edge multiviewer"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section class="project">
+				<h3 class="project-title">AI Knowledge Base &mdash; Obsidian Vault</h3>
+				<div class="project-body">
+					<div class="prose project-copy">
+						<p>
+							I have been building an AI knowledge base for the company using Obsidian. Instead of
+							pasting documentation into a chat window, it keeps everything AI tools need &mdash; API
+							references, example projects, and in-house library notes &mdash; in one linked vault.
+						</p>
+						<p>
+							Linking related notes together means AI assistants can pull in the right context on
+							demand, making answers more accurate and cutting down on repetitive copy-pasting across the
+							team.
+						</p>
+						<p>
+							Alongside the vault, I looked into a number of different MCP (Model Context Protocol)
+							servers, including developing a custom MCP server to let AI tools talk directly to our
+							locally hosted GitLab server.
+						</p>
+					</div>
+					<div class="project-media">
+						<img
+							class="project-media-logo"
+							src="https://obsidian.md/images/obsidian-logo-gradient.svg"
+							alt="Obsidian logo"
+						/>
+						<img
+							src={obsidianJanus}
+							alt="Obsidian vault used as an AI knowledge base at Janus Technology"
 						/>
 					</div>
 				</div>

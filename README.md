@@ -1,6 +1,17 @@
-# sv
+# [jamesdillon.uk](https://jamesdillon.uk)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+> [!IMPORTANT]
+> ## [www.jamesdillon.uk](https://jamesdillon.uk/)
+> > [home](https://jamesdillon.uk/) | [work](https://jamesdillon.uk/work) | [about](https://jamesdillon.uk/about) | [coursework](https://jamesdillon.uk/coursework) | [self hosted](https://jamesdillon.uk/selfhosted) | [contact](https://jamesdillon.uk/contact) | [LinkedIn](https://www.linkedin.com/in/jamesdillondev/)
+
+---
+
+[![Contributions Graph](./profile-3d-contrib/profile-night-rainbow.svg)](https://github.com/JamesDillonDev)
+
+![View Counter](https://komarev.com/ghpvc/?username=JamesDillonDev&style=flat-square&base=420&label=views)
+<!-- ALTERNATE: "![View Counter](https://komarev.com/ghpvc/?username=JamesDillonDev&style=for-the-badge&base=420&label=views)" -->
+
+Source for my personal portfolio site, built with SvelteKit and self-hosted via a custom Docker image that my server automatically pulls and updates on every push to `master`.
 
 ## Creating a project
 

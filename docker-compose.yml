@@ -1,0 +1,7 @@
+services:
+  website:
+    image: ghcr.io/jamesdillondev/website/site:latest
+    container_name: website
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
