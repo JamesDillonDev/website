@@ -10,6 +10,12 @@
 	let showDofE = $state(false);
 	let showOtherQualifications = $state(false);
 
+	const aLevelPredictions = [
+		{ subject: 'Product Design', grade: 'A*' },
+		{ subject: 'Computer Science', grade: 'A' },
+		{ subject: 'Maths', grade: 'B' }
+	];
+
 	const gcseResults = [
 		{ subject: 'Maths', grade: '7', equivalent: 'A' },
 		{ subject: 'English', grade: '5', equivalent: 'C' },
@@ -63,10 +69,35 @@
 			<div class="prose education-body">
 				<p>
 					Currently studying for A-Levels in Maths, Computer Science, and Product Design at Knights
-					Templar School Sixth Form. For my Extended Project Qualification (EPQ), I am designing
-					and building an automatic pet dispenser/dog feeder. Below are my GCSE results:
+					Templar School Sixth Form. For my Extended Project Qualification (EPQ), I designed and
+					built an automatic pet dispenser/dog feeder, which I finished with an A* (50/52). You can
+					read the full write-up on my <a href="/coursework">coursework page</a>. Below are my
+					predicted A-Level grades, followed by my GCSE results:
 				</p>
 			</div>
+
+			<h3 class="results-title">Predicted A-Level Grades</h3>
+
+			<div class="table-wrap results-wrap">
+				<table class="data-table">
+					<thead>
+						<tr>
+							<th>Subject</th>
+							<th>Predicted Grade</th>
+						</tr>
+					</thead>
+					<tbody>
+						{#each aLevelPredictions as result}
+							<tr>
+								<td>{result.subject}</td>
+								<td>{result.grade}</td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			</div>
+
+			<h3 class="results-title">GCSE Results</h3>
 
 			<div class="table-wrap results-wrap">
 				<table class="data-table">
