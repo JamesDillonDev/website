@@ -100,6 +100,30 @@
 	color: #ffffff;
 }
 
+.cv-button {
+	display: grid;
+	place-items: center;
+	flex-shrink: 0;
+	height: 2.1rem;
+	padding: 0 0.7rem;
+	border-radius: 999px;
+	color: rgb(255 255 255 / 70%);
+	font-size: 0.85rem;
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.cv-button:hover,
+.cv-button:focus-visible,
+.cv-button.active {
+	background: rgb(255 255 255 / 10%);
+	color: #ffffff;
+}
+
 @media (max-width: 820px) {
 	.site-header-inner {
 		flex-wrap: wrap;
