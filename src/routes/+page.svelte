@@ -126,18 +126,17 @@
 		<h2 class="page-title">Personal Statement</h2>
 		<div class="prose statement">
 			<p>
-				I am a motivated and curious student who enjoys learning, creating, and experimenting with
-				new ideas—especially in design and technology. My favourite subject at school is Design and
-				Technology, where I love bringing concepts to life, whether through 3D printing,
-				electronics, or hands-on making. I also have a strong passion for software development,
-				building web apps and tools that solve real problems or showcase my creativity.
+				I'm a sixth form student who likes turning ideas into things that actually work — a
+				3D-printed pet feeder, a smart home rebuilt from scratch, a live map of UK traffic cameras
+				used by real people. Design and Technology is my favourite subject at school, but I spend
+				just as much time writing code, from a part-time software engineering job to my own
+				self-hosted projects.
 			</p>
 			<p>
-				Volunteering at different organizations has helped me develop strong teamwork and
-				communication skills. I am keen to gain experience in a professional environment and plan to
-				pursue an apprenticeship after my A Levels, where I can continue learning and developing my
-				skills in both design and software. Outside of school and my projects, I enjoy running (5K
-				PB: 20:35) and am always looking for new challenges.
+				Volunteering with the Air Cadets and Scouts has given me plenty of practice teaching,
+				organising and taking responsibility for others, and I'm looking to build on that with an
+				apprenticeship after my A Levels. Outside of all that I run competitively (5K PB: 20:35) and
+				I'm always looking for the next thing to build or improve.
 			</p>
 		</div>
 	</div>
