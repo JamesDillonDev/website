@@ -3,3 +3,6 @@ portfolio-qr.png
 
 # Export step only — the published copy lives at src/lib/assets/James_Dillon_CV.pdf
 *.pdf
+
+# Python bytecode from the build scripts
+__pycache__/
