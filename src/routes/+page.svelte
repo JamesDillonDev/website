@@ -13,8 +13,8 @@
 		{
 			image: openHighwaysPreview,
 			alt: 'OpenHighways — a live map of UK traffic cameras',
-			heading: 'Check out my new project: OpenHighways',
-			body: 'A free, live map of UK traffic cameras — pulling feeds from National Highways, TfL, Traffic Scotland, Traffic Wales and TrafficWatchNI into one place, with on-device vehicle counting for busy roads.',
+			heading: 'Checkout OpenHighways',
+			body: 'A free, live map of UK traffic cameras, with on-device vehicle counting.',
 			cta: { label: 'Visit openhighways.uk', href: 'https://openhighways.uk' },
 			secondaryCta: {
 				label: 'GitHub',
