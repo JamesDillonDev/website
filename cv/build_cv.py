@@ -50,13 +50,14 @@ cv.heading("Key Skills")
 cv.skill_line("Languages", "C#, Python, JavaScript")
 cv.skill_line("Web & software", "React, SvelteKit, HTML/CSS; building web apps and plugins to a brief")
 cv.skill_line("Infrastructure", "Docker, Linux, self-hosting, home networking, automated image builds and deploys")
-cv.skill_line("Version control", "Git, GitHub, self-hosted GitLab")
 cv.skill_line("AI tooling", "LLM-based automation, Model Context Protocol (MCP) servers, structured knowledge bases")
 cv.skill_line("Hardware", "Raspberry Pi, Zigbee, LoRa, sensors and smart devices, wiring and low-voltage installation, "
                           "hardware integration, testing and fault-finding")
-cv.skill_line("Design", "Taking a product from brief to working prototype: research, sketching and concept "
-                        "development, CAD modelling, 3D printing and electronics, then testing and iterating "
-                        "(A-Level Product Design, GCSE DT grade 9, EPQ A*)")
+cv.skill_line("Design", "Product design from brief to prototype: CAD, 3D printing and electronics "
+                        "(A-Level Product Design, GCSE DT grade 9)")
+cv.skill_line("Leadership", "Air Cadets Sergeant responsible for junior cadets; Scouts Young Leader")
+cv.skill_line("Communication", "Plan and deliver lessons to groups of 10–20; Instructor First Aid")
+cv.skill_line("Teamwork", "Team project on work experience at MBDA; part-time at Janus Technology; volunteer teams at events")
 
 # =====================================================================
 cv.heading("Education")
