@@ -37,25 +37,26 @@ cv.header(
 # =====================================================================
 cv.heading("Profile", first=True)
 cv.paragraph(
-    "Sixth form student studying Maths, Computer Science and Product Design, looking for a software or "
-    "engineering apprenticeship. I have worked part-time as a junior software engineer at Janus Technology "
-    "since July 2025, building features that went out to real customers, and spent a placement at MBDA "
-    "working on a Raspberry Pi guided missile project. Outside of school I build things end to end, from a "
-    "self-hosted website and home server to 3D-printed electronics projects. I am also a Sergeant in the Air "
-    "Cadets, so I am used to teaching, organising and being responsible for other people.",
+    "I’m a Year 13 student studying Maths, Computer Science and Product Design, with a strong interest in "
+    "software and engineering. I particularly enjoy combining software with hardware, which I’ve explored "
+    "through projects including a smart home and an automated pet feeder, alongside experience at Janus "
+    "Technology and MBDA. Aviation is also a big interest of mine, both as a hobby and through the RAF Air "
+    "Cadets, where I’m now a Sergeant. I’m looking for a software or engineering apprenticeship where I can "
+    "build on these interests while gaining practical experience in industry.",
     before=1, line=1.05)
 
 # =====================================================================
 cv.heading("Key Skills")
 cv.skill_line("Languages", "C#, Python, JavaScript")
-cv.skill_line("Web & software", "SvelteKit, HTML/CSS; building web apps and plugins to a brief")
+cv.skill_line("Web & software", "React, SvelteKit, HTML/CSS; building web apps and plugins to a brief")
 cv.skill_line("Infrastructure", "Docker, Linux, self-hosting, home networking, automated image builds and deploys")
 cv.skill_line("Version control", "Git, GitHub, self-hosted GitLab")
 cv.skill_line("AI tooling", "LLM-based automation, Model Context Protocol (MCP) servers, structured knowledge bases")
-cv.skill_line("Hardware", "Raspberry Pi, Zigbee, sensors and smart devices, wiring and low-voltage installation, "
+cv.skill_line("Hardware", "Raspberry Pi, Zigbee, LoRa, sensors and smart devices, wiring and low-voltage installation, "
                           "hardware integration, testing and fault-finding")
-cv.skill_line("Design", "Product and concept design, CAD, 3D printing, electronics, prototyping and iterating "
-                        "from a brief (A-Level Product Design, GCSE DT grade 9)")
+cv.skill_line("Design", "Taking a product from brief to working prototype: research, sketching and concept "
+                        "development, CAD modelling, 3D printing and electronics, then testing and iterating "
+                        "(A-Level Product Design, GCSE DT grade 9, EPQ A*)")
 
 # =====================================================================
 cv.heading("Education")
@@ -106,7 +107,7 @@ cv.bullet("Rotated through systems testing and validation, materials, hardware-i
 # =====================================================================
 cv.heading("Projects")
 
-cv.role("OpenHighways — Live UK Traffic Camera Map", "SvelteKit, Leaflet, Docker", "2026")
+cv.role("OpenHighways — Live UK Traffic Camera Map", "React, Leaflet, Docker", "2026")
 _b = cv.bullet([("openhighways.uk — ", True),
                 ("a free, live map of UK traffic cameras, pulling feeds from National Highways, TfL, Traffic "
                  "Scotland, Traffic Wales and TrafficWatchNI into one place, with on-device vehicle counting "
