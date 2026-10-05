@@ -47,6 +47,9 @@ cv.paragraph(
 
 # =====================================================================
 cv.heading("Key Skills")
+cv.skill_line("Leadership", "Air Cadets Sergeant responsible for junior cadets; Scouts Young Leader")
+cv.skill_line("Communication", "Plan and deliver lessons to groups of 10–20; Instructor First Aid")
+cv.skill_line("Teamwork", "Team project on work experience at MBDA; part-time at Janus Technology; volunteer teams at events")
 cv.skill_line("Languages", "C#, Python, JavaScript")
 cv.skill_line("Web & software", "React, SvelteKit, HTML/CSS; building web apps and plugins to a brief")
 cv.skill_line("Infrastructure", "Docker, Linux, self-hosting, home networking, automated image builds and deploys")
@@ -55,9 +58,6 @@ cv.skill_line("Hardware", "Raspberry Pi, Zigbee, LoRa, sensors and smart devices
                           "hardware integration, testing and fault-finding")
 cv.skill_line("Design", "Product design from brief to prototype: CAD, 3D printing and electronics "
                         "(A-Level Product Design, GCSE DT grade 9)")
-cv.skill_line("Leadership", "Air Cadets Sergeant responsible for junior cadets; Scouts Young Leader")
-cv.skill_line("Communication", "Plan and deliver lessons to groups of 10–20; Instructor First Aid")
-cv.skill_line("Teamwork", "Team project on work experience at MBDA; part-time at Janus Technology; volunteer teams at events")
 
 # =====================================================================
 cv.heading("Education")
@@ -106,6 +106,32 @@ cv.bullet("Rotated through systems testing and validation, materials, hardware-i
           "delivered from concept through to implementation.")
 
 # =====================================================================
+cv.heading("Leadership & Volunteering")
+
+cv.role("RAF Air Cadets, 248 Squadron", "Sergeant", "2022 – present")
+cv.bullet("Promoted through four ranks to Sergeant, responsible for the training and welfare of junior "
+          "cadets on weekly parade nights.")
+cv.bullet("Methods of Instruction qualified, so I plan and deliver lessons to groups of 10–20 and "
+          "assess cadets afterwards. Also hold the Silver Leadership award.")
+cv.bullet("Qualified First Aid Instructor (St John Ambulance), able to teach and assess first aid as well as "
+          "respond to incidents.")
+cv.bullet("Represent the squadron at public events such as Remembrance Sunday, and competed in athletics at "
+          "Wing and Regional level.")
+
+cv.role("Scouts and Explorers", "Young Leader", "2014 – present")
+cv.bullet("Help run weekly meetings at my old Scout group, planning activities, keeping sessions on track "
+          "and supporting the leaders.")
+cv.bullet("Help organise weekend camps and residentials: sorting equipment, giving safety briefings and "
+          "running outdoor activities.")
+cv.bullet("Volunteer on the BBQ and bar at Balstock and the Baldock Beer Festival, serving 100+ members of "
+          "the public, handling cash and keeping a busy food station clean and safe.")
+
+cv.role("Duke of Edinburgh’s Award", "Bronze completed, Silver in progress", "2022 – present")
+cv.bullet("Expeditions in North Yorkshire and the Peak District involving route planning, navigation and "
+          "teamwork, volunteering in the local community, and a cybersecurity club covering online safety "
+          "and ethical hacking.")
+
+# =====================================================================
 cv.heading("Projects")
 
 cv.role("OpenHighways — Live UK Traffic Camera Map", "React, Leaflet, Docker", "2026")
@@ -139,32 +165,6 @@ cv.bullet("Added a wall-mounted Raspberry Pi 4 touchscreen panel so the whole ho
 cv.role("Jellyfin Media Server", "Self-hosted home lab", "2025 – present")
 cv.bullet("Run a Jellyfin server holding our media and the CDs I have ripped, so the family has one central "
           "library. Set up to be reliable and simple enough that everyone can use it without my help.")
-
-# =====================================================================
-cv.heading("Leadership & Volunteering")
-
-cv.role("RAF Air Cadets, 248 Squadron", "Sergeant", "2022 – present")
-cv.bullet("Promoted through four ranks to Sergeant, responsible for the training and welfare of junior "
-          "cadets on weekly parade nights.")
-cv.bullet("Methods of Instruction qualified, so I plan and deliver lessons to groups of 10–20 and "
-          "assess cadets afterwards. Also hold the Silver Leadership award.")
-cv.bullet("Qualified First Aid Instructor (St John Ambulance), able to teach and assess first aid as well as "
-          "respond to incidents.")
-cv.bullet("Represent the squadron at public events such as Remembrance Sunday, and competed in athletics at "
-          "Wing and Regional level.")
-
-cv.role("Scouts and Explorers", "Young Leader", "2014 – present")
-cv.bullet("Help run weekly meetings at my old Scout group, planning activities, keeping sessions on track "
-          "and supporting the leaders.")
-cv.bullet("Help organise weekend camps and residentials: sorting equipment, giving safety briefings and "
-          "running outdoor activities.")
-cv.bullet("Volunteer on the BBQ and bar at Balstock and the Baldock Beer Festival, serving 100+ members of "
-          "the public, handling cash and keeping a busy food station clean and safe.")
-
-cv.role("Duke of Edinburgh’s Award", "Bronze completed, Silver in progress", "2022 – present")
-cv.bullet("Expeditions in North Yorkshire and the Peak District involving route planning, navigation and "
-          "teamwork, volunteering in the local community, and a cybersecurity club covering online safety "
-          "and ethical hacking.")
 
 # =====================================================================
 cv.heading("Qualifications, Awards & Interests")
