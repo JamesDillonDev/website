@@ -74,10 +74,10 @@ para("I already work as a part-time Junior Software Engineer at Janus Technology
      "job advert.]")
 
 # Experience: hardware / engineering
-para("What I enjoy most is combining software with hardware. At MBDA I worked in a team to design and "
+para("What I enjoy most is combining software with hardware. In July 2026 at MBDA I worked in a team to design and "
      "program a miniature guided missile on a Raspberry Pi, helping with the code, integrating the "
      "hardware and tracking down faults, and I saw how a large engineering programme is delivered from "
-     "concept to implementation. At home I run a Home Assistant smart home on Zigbee, built an automatic "
+     "concept to implementation. At home I run a Home Assistant smart home with Zigbee devices and wall switches, built an automatic "
      "pet feeder for my Extended Project Qualification (A*), and created OpenHighways, a live map of UK "
      "traffic cameras that I self-host with automated Docker deploys. [Pick the one or two most relevant "
      "to this role and cut the rest.]")

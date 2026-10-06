@@ -39,8 +39,9 @@ cv.heading("Profile", first=True)
 cv.paragraph(
     "Year 13 student (Maths, Computer Science, Product Design) and part-time Junior Software Engineer with a "
     "real love of combining hardware and software, in my coursework and personal projects alike. I run a "
-    "Docker-based home lab with a Zigbee smart home and a Jellyfin media server, built an automated pet feeder "
-    "for my EPQ, and I’m an RAF Air Cadets Sergeant. Seeking a software or engineering degree or higher "
+    "Docker-based home lab with a Home Assistant smart home (Zigbee devices and wall switches) and a Jellyfin "
+    "media server, built an automated pet feeder for my EPQ, and I’m an RAF Air Cadets Sergeant with a keen "
+    "interest in aviation. Seeking a software or engineering degree or higher "
     "apprenticeship starting September 2027.",
     before=1, line=1.05)
 
@@ -92,7 +93,7 @@ cv.bullet([("AI knowledge base — ", True),
 cv.bullet("Deliver each project to a brief, mostly independently within a small team, revising it after code "
           "review and feedback from colleagues.")
 
-cv.role("MBDA", "Engineering Work Experience", "2026")
+cv.role("MBDA", "Engineering Work Experience", "July 2026")
 _b = cv.bullet([("Miniature guided missile — ", True),
                 ("in a team, designed and built a model guided missile running on a Raspberry Pi. I wrote part "
                  "of the control code, wired in the hardware, tested the system and tracked down faults. "
@@ -172,7 +173,7 @@ cv.bullet("Also run a Jellyfin media server so the family has one central librar
 cv.heading("Qualifications & Interests")
 cv.skill_line("Qualifications", "Instructor First Aid (St John Ambulance) · Methods of Instruction · "
                                 "BTEC Level 2 Teamwork and Personal Development · Fire Warden")
-cv.skill_line("Interests", "Running (5K PB 20:35, Wing-level athletics gold), home lab and self-hosting, "
+cv.skill_line("Interests", "Aviation, running (5K PB 20:35, Wing-level athletics gold), home lab and self-hosting, "
                            "3D printing and electronics projects")
 
 cv.footer_note("Full write-ups, coursework and source code: ", "jamesdillon.uk", PORTFOLIO_URL)
