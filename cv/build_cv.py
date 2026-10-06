@@ -37,12 +37,10 @@ cv.header(
 # =====================================================================
 cv.heading("Profile", first=True)
 cv.paragraph(
-    "I’m a Year 13 student studying Maths, Computer Science and Product Design, with a strong interest in "
-    "software and engineering. I particularly enjoy combining software with hardware, which I’ve explored "
-    "through projects including a smart home and an automated pet feeder, alongside experience at Janus "
-    "Technology and MBDA. Aviation is also a big interest of mine, both as a hobby and through the RAF Air "
-    "Cadets, where I’m now a Sergeant. I’m looking for a software or engineering apprenticeship where I can "
-    "build on these interests while gaining practical experience in industry.",
+    "Year 13 student (Maths, Computer Science, Product Design) and part-time Junior Software Engineer who "
+    "built and self-hosts a live UK traffic camera map. I enjoy combining software with hardware, from a smart "
+    "home to an automated pet feeder, and I’m an RAF Air Cadets Sergeant. Seeking a software or engineering "
+    "degree or higher apprenticeship starting September 2027.",
     before=1, line=1.05)
 
 # =====================================================================
@@ -69,16 +67,16 @@ cv.bullet([("Extended Project Qualification — A* (50/52): ", True),
            ("designed and built an automatic pet feeder, covering the research, design, electronics and "
             "build. Full write-up on my portfolio.", False)])
 cv.bullet([("GCSEs: ", True),
-           ("grade 9 in Design and Technology and Computer Science; 8 in Physics and Media; 7 in Maths and "
-            "Chemistry; 6 in Biology; 5 in English. Cambridge National in Enterprise and Marketing — M2 "
-            "(grade A equivalent). Graded coursework is on my portfolio.", False)])
+           ("grade 9 in Design and Technology and Computer Science; 8 in Physics; 7 in Maths; 5 in English; "
+            "plus 5 further GCSEs at grades 6–8 and a Cambridge National in Enterprise and Marketing (M2, "
+            "grade A equivalent). Graded coursework is on my portfolio.", False)])
 
 # =====================================================================
 cv.heading("Work Experience")
 
 cv.role("Janus Technology", "Junior Software Engineer (part-time)", "July 2025 – present")
 cv.bullet([("Support ticket automation (osTicket) — ", True),
-           ("built a plugin for the open-source osTicket helpdesk that reads an incoming ticket, works out "
+           ("built a plugin for the open-source osTicket helpdesk that reads each incoming ticket, works out "
             "the likely problem and drafts a step-by-step reply, so common queries get a useful first "
             "response without waiting for an agent.", False)])
 cv.bullet([("Stile app for AVProEdge — ", True),
@@ -90,14 +88,14 @@ cv.bullet([("AI knowledge base — ", True),
             "notes so AI tools can pull the right context instead of the team pasting docs into a chat "
             "window. Also tested several MCP servers and wrote a custom one to connect AI tools to our "
             "self-hosted GitLab.", False)])
-cv.bullet("Worked to a brief on each project, mostly on my own but within a team, and iterated on feedback. "
-          "Completed workplace fire warden training.")
+cv.bullet("Deliver each project to a brief, mostly independently within a small team, revising it after code "
+          "review and feedback from colleagues.")
 
 cv.role("MBDA", "Engineering Work Experience", "2026")
 _b = cv.bullet([("Miniature guided missile — ", True),
-                ("worked in a team to design and program a model guided missile running on a Raspberry Pi, "
-                 "helping with the code, integrating the hardware, testing the system and tracking down "
-                 "faults. Code on GitHub at ", False)])
+                ("in a team, designed and built a model guided missile running on a Raspberry Pi. I wrote part "
+                 "of the control code, wired in the hardware, tested the system and tracked down faults. "
+                 "Code on GitHub at ", False)])
 cv.hyperlink(_b, "JamesDillonDev/mini-missile",
              "https://github.com/JamesDillonDev/mini-missile", size=10, color="1A1A1A")
 cv.run(_b, ".", size=10)
@@ -109,20 +107,19 @@ cv.bullet("Rotated through systems testing and validation, materials, hardware-i
 cv.heading("Leadership & Volunteering")
 
 cv.role("RAF Air Cadets, 248 Squadron", "Sergeant", "2022 – present")
-cv.bullet("Promoted through four ranks to Sergeant, responsible for the training and welfare of junior "
-          "cadets on weekly parade nights.")
-cv.bullet("Methods of Instruction qualified, so I plan and deliver lessons to groups of 10–20 and "
-          "assess cadets afterwards. Also hold the Silver Leadership award.")
+cv.bullet("Promoted through four ranks to Sergeant; train and look after junior cadets every week on parade "
+          "nights.")
+cv.bullet("Methods of Instruction qualified: I plan and deliver lessons to groups of 10–20 and assess "
+          "cadets afterwards. Hold the Silver Leadership award.")
 cv.bullet("Qualified First Aid Instructor (St John Ambulance), able to teach and assess first aid as well as "
           "respond to incidents.")
 cv.bullet("Represent the squadron at public events such as Remembrance Sunday, and competed in athletics at "
           "Wing and Regional level.")
 
 cv.role("Scouts and Explorers", "Young Leader", "2014 – present")
-cv.bullet("Help run weekly meetings at my old Scout group, planning activities, keeping sessions on track "
-          "and supporting the leaders.")
-cv.bullet("Help organise weekend camps and residentials: sorting equipment, giving safety briefings and "
-          "running outdoor activities.")
+cv.bullet("Plan and run activities at weekly meetings of my old Scout group, keeping sessions on track and "
+          "supporting the leaders.")
+cv.bullet("Organise kit, give safety briefings and run outdoor activities on weekend camps and residentials.")
 cv.bullet("Volunteer on the BBQ and bar at Balstock and the Baldock Beer Festival, serving 100+ members of "
           "the public, handling cash and keeping a busy food station clean and safe.")
 
@@ -152,7 +149,7 @@ cv.bullet("Built the site in SvelteKit and self-host it from a custom Docker ima
 cv.bullet("Wrote a custom in-page PDF viewer component so my coursework can be read on the site instead of "
           "having to be downloaded first.")
 
-cv.role("Home Assistant Smart Home", "Docker, Zigbee, Raspberry Pi", "2025 – present")
+cv.role("Home Lab — Home Assistant Smart Home & Jellyfin", "Docker, Zigbee, Raspberry Pi", "2025 – present")
 cv.bullet("Rebuilt the family smart home around Home Assistant in Docker. Started with Tapo smart plugs for "
           "lighting, then added Wake-on-LAN control for the TV and Sonos playback.")
 cv.bullet("Moved over to Zigbee using a Sonoff dongle and motion sensors for automations like hallway lights "
@@ -161,20 +158,15 @@ cv.bullet("Moved over to Zigbee using a Sonoff dongle and motion sensors for aut
 cv.bullet("Added a wall-mounted Raspberry Pi 4 touchscreen panel so the whole house can use the system "
           "without reaching for a phone. I diagnose and fix the hardware, network and integration problems "
           "myself.")
-
-cv.role("Jellyfin Media Server", "Self-hosted home lab", "2025 – present")
-cv.bullet("Run a Jellyfin server holding our media and the CDs I have ripped, so the family has one central "
-          "library. Set up to be reliable and simple enough that everyone can use it without my help.")
+cv.bullet("Also run a Jellyfin media server so the family has one central library, including the CDs I have "
+          "ripped, simple enough for everyone to use without my help.")
 
 # =====================================================================
-cv.heading("Qualifications, Awards & Interests")
-cv.skill_line("Qualifications", "Instructor First Aid, St John Ambulance · Methods of Instruction · "
-                                "BTEC Level 2 in Teamwork and Personal Development (GCSE equivalent) · "
-                                "Air Cadets Silver Leadership · Fire Warden (valid to 2027)")
-cv.skill_line("Awards", "EPQ A* (50/52) · Gold medal, Wing-level athletics · GCSE grade 9 in Design "
-                        "and Technology and in Computer Science")
-cv.skill_line("Interests", "Running (5K PB 20:35), home lab and self-hosting, 3D printing and electronics "
-                           "projects")
+cv.heading("Qualifications & Interests")
+cv.skill_line("Qualifications", "Instructor First Aid (St John Ambulance) · Methods of Instruction · "
+                                "BTEC Level 2 Teamwork and Personal Development · Fire Warden")
+cv.skill_line("Interests", "Running (5K PB 20:35, Wing-level athletics gold), home lab and self-hosting, "
+                           "3D printing and electronics projects")
 
 cv.footer_note("Full write-ups, coursework and source code: ", "jamesdillon.uk", PORTFOLIO_URL)
 
