@@ -37,10 +37,11 @@ cv.header(
 # =====================================================================
 cv.heading("Profile", first=True)
 cv.paragraph(
-    "Year 13 student (Maths, Computer Science, Product Design) and part-time Junior Software Engineer who "
-    "built and self-hosts a live UK traffic camera map. I enjoy combining software with hardware, from a smart "
-    "home to an automated pet feeder, and I’m an RAF Air Cadets Sergeant. Seeking a software or engineering "
-    "degree or higher apprenticeship starting September 2027.",
+    "Year 13 student (Maths, Computer Science, Product Design) and part-time Junior Software Engineer with a "
+    "real love of combining hardware and software, in my coursework and personal projects alike. I run a "
+    "Docker-based home lab with a Zigbee smart home and a Jellyfin media server, built an automated pet feeder "
+    "for my EPQ, and I’m an RAF Air Cadets Sergeant. Seeking a software or engineering degree or higher "
+    "apprenticeship starting September 2027.",
     before=1, line=1.05)
 
 # =====================================================================
@@ -122,6 +123,12 @@ cv.bullet("Plan and run activities at weekly meetings of my old Scout group, kee
 cv.bullet("Organise kit, give safety briefings and run outdoor activities on weekend camps and residentials.")
 cv.bullet("Volunteer on the BBQ and bar at Balstock and the Baldock Beer Festival, serving 100+ members of "
           "the public, handling cash and keeping a busy food station clean and safe.")
+
+cv.role("VEX Robotics Club", "Team Member & Mentor, Knights Templar School", "Sept 2026 – present")
+cv.bullet("Design and build robots for VEX competition tasks such as moving and stacking objects, competing "
+          "against other school teams in head-to-head arena matches.")
+cv.bullet("In the main team I help design mechanisms and parts. I also mentor younger groups, teaching the "
+          "basic ideas and concepts of robot design.")
 
 cv.role("Duke of Edinburgh’s Award", "Bronze completed, Silver in progress", "2022 – present")
 cv.bullet("Expeditions in North Yorkshire and the Peak District involving route planning, navigation and "
