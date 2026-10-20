@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/state';
+	import { onMount, tick } from 'svelte';
 	import './Header.css';
 
 	const links = [
@@ -15,13 +16,50 @@
 	function isActive(href) {
 		return href === '/' ? page.url.pathname === '/' : page.url.pathname.startsWith(href);
 	}
+
+	/** @type {HTMLElement | undefined} */
+	let nav = $state();
+	let pill = $state({ x: 0, w: 0, visible: false, ready: false });
+
+	async function movePill() {
+		await tick();
+		const el = nav?.querySelector('.nav-link.active');
+		if (!nav || !(el instanceof HTMLElement)) {
+			pill.visible = false;
+			return;
+		}
+		pill.x = el.offsetLeft;
+		pill.w = el.offsetWidth;
+		pill.visible = true;
+		el.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+	}
+
+	$effect(() => {
+		page.url.pathname;
+		movePill();
+	});
+
+	onMount(() => {
+		movePill().then(() => requestAnimationFrame(() => (pill.ready = true)));
+		window.addEventListener('resize', movePill);
+		document.fonts?.ready.then(movePill);
+		return () => window.removeEventListener('resize', movePill);
+	});
 </script>
 
 <header class="site-header">
 	<div class="site-header-inner">
 		<a class="site-title" href="/">James Dillon</a>
 
-		<nav class="site-nav" aria-label="Primary">
+		<nav class="site-nav" aria-label="Primary" bind:this={nav}>
+			<span
+				class="nav-pill"
+				class:ready={pill.ready}
+				aria-hidden="true"
+				style:transform="translateX({pill.x}px)"
+				style:width="{pill.w}px"
+				style:opacity={pill.visible ? 1 : 0}
+			></span>
 			{#each links as link}
 				<a
 					class="nav-link"
