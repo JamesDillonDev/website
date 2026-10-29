@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/state';
+	import { goto } from '$app/navigation';
 	import { onMount, tick } from 'svelte';
 	import './Header.css';
 
@@ -34,6 +35,64 @@
 		el.scrollIntoView({ inline: 'nearest', block: 'nearest' });
 	}
 
+	// Drag the highlight along the nav; on release it snaps to the nearest link and navigates
+	let dragging = $state(false);
+	let moved = false;
+	let startX = 0;
+	let startPillX = 0;
+
+	/** @param {PointerEvent} e */
+	function dragStart(e) {
+		const el = nav?.querySelector('.nav-link.active');
+		if (!nav || !(el instanceof HTMLElement) || e.button !== 0) return;
+		if (!(e.target instanceof Node) || !el.contains(e.target)) return;
+		startX = e.clientX;
+		startPillX = pill.x;
+		moved = false;
+		dragging = true;
+		nav.setPointerCapture(e.pointerId);
+	}
+
+	/** @param {PointerEvent} e */
+	function dragMove(e) {
+		if (!dragging || !nav) return;
+		const dx = e.clientX - startX;
+		if (Math.abs(dx) > 4) moved = true;
+		if (!moved) return;
+		const last = /** @type {HTMLElement} */ (nav.lastElementChild);
+		const max = last.offsetLeft + last.offsetWidth - pill.w;
+		const min = /** @type {HTMLElement} */ (nav.querySelector('.nav-link')).offsetLeft;
+		pill.x = Math.min(max, Math.max(min, startPillX + dx));
+	}
+
+	/** @param {PointerEvent} e */
+	async function dragEnd(e) {
+		if (!dragging || !nav) return;
+		dragging = false;
+		nav.releasePointerCapture?.(e.pointerId);
+		if (!moved) return;
+		const center = pill.x + pill.w / 2;
+		const els = /** @type {HTMLAnchorElement[]} */ ([...nav.querySelectorAll('.nav-link')]);
+		const nearest = els.reduce((best, el) =>
+			Math.abs(el.offsetLeft + el.offsetWidth / 2 - center) <
+			Math.abs(best.offsetLeft + best.offsetWidth / 2 - center)
+				? el
+				: best
+		);
+		if (nearest.classList.contains('active')) return movePill();
+		pill.x = nearest.offsetLeft;
+		pill.w = nearest.offsetWidth;
+		await goto(nearest.getAttribute('href') ?? '/');
+	}
+
+	/** @param {MouseEvent} e */
+	function swallowClick(e) {
+		if (moved) {
+			e.preventDefault();
+			moved = false;
+		}
+	}
+
 	$effect(() => {
 		page.url.pathname;
 		movePill();
@@ -51,7 +110,18 @@
 	<div class="site-header-inner">
 		<a class="site-title" href="/">James Dillon</a>
 
-		<nav class="site-nav" aria-label="Primary" bind:this={nav}>
+		<nav
+			class="site-nav"
+			class:dragging
+			aria-label="Primary"
+			bind:this={nav}
+			onpointerdown={dragStart}
+			onpointermove={dragMove}
+			onpointerup={dragEnd}
+			onpointercancel={dragEnd}
+			onclickcapture={swallowClick}
+			ondragstart={(e) => e.preventDefault()}
+		>
 			<span
 				class="nav-pill"
 				class:ready={pill.ready}
@@ -63,6 +133,7 @@
 			{#each links as link}
 				<a
 					class="nav-link"
+					draggable="false"
 					class:active={isActive(link.href)}
 					aria-current={isActive(link.href) ? 'page' : undefined}
 					href={link.href}>{link.label}</a
