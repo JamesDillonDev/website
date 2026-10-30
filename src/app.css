@@ -82,6 +82,23 @@ a {
 	color: inherit;
 }
 
+/* No default blue flash when tapping links and buttons on touch screens */
+a,
+button,
+summary,
+label {
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Buttons never start a text selection (the other blue box on touch screens) */
+.btn,
+.cv-button,
+.nav-link {
+	-webkit-touch-callout: none;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
 img {
 	max-width: 100%;
 }
